@@ -1,0 +1,75 @@
+<!-- Открываем корневой элемент HTML -->
+<html>
+
+<!-- Подключаем библиотеку A-Frame для создания VR/AR сцен -->
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+
+<!-- Подключаем расширение A-Frame для маркерного отслеживания AR -->
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<!-- Внутренние стили CSS для отображения загрузочного экрана -->
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+
+<!-- Начинаем тело документа с настройками стилей -->
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- Элемент, отображающийся во время загрузки -->
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+
+  <!-- Определяем сцену A-Frame -->
+  <a-scene
+    vr-mode-ui="enabled: false;" <!-- Отключаем интерфейс VR -->
+    renderer="logarithmicDepthBuffer: true;" <!-- Настройка рендеринга сцены -->
+    embedded <!-- Встраиваем сцену в документ -->
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" <!-- Настройки AR -->
+  >
+
+    
+    
+    <!-- Определяем маркерное отслеживание на основе изображения -->
+    <a-nft
+      type="nft"
+      url="https://i.imgur.com/6vIc6Js.jpg"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+      <!-- Размещаем 3D модель динозавра -->
+      <a-entity
+        gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+        scale="5 5 5"
+        position="50 150 0"
+      >
+      </a-entity>
+    </a-nft>
+
+    <!-- Размещаем камеру для просмотра сцены -->
+    <a-entity camera></a-entity>
+
+  </a-scene>
+</body>
+
+<!-- Закрываем корневой элемент HTML -->
+</html>
