@@ -1,0 +1,11 @@
+Model Information:
+* title:	роутер
+* source:	https://sketchfab.com/3d-models/47500b2c58704b929216a90c8c087567
+* author:	Light-huter (https://sketchfab.com/Light-huter)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "роутер" (https://sketchfab.com/3d-models/47500b2c58704b929216a90c8c087567) by Light-huter (https://sketchfab.com/Light-huter) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
